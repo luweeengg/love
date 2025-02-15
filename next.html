@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: var(--bg-color);
+            overflow: hidden;
+            perspective: 1000px;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #ff4d6d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .carousel {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite linear;
+        }
+        .carousel img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 1s;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        .carousel img:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+        .carousel img:nth-child(2) { transform: rotateY(45deg) translateZ(300px); }
+        .carousel img:nth-child(3) { transform: rotateY(90deg) translateZ(300px); }
+        .carousel img:nth-child(4) { transform: rotateY(135deg) translateZ(300px); }
+        .carousel img:nth-child(5) { transform: rotateY(180deg) translateZ(300px); }
+        .carousel img:nth-child(6) { transform: rotateY(225deg) translateZ(300px); }
+        .carousel img:nth-child(7) { transform: rotateY(270deg) translateZ(300px); }
+        .carousel img:nth-child(8) { transform: rotateY(315deg) translateZ(300px); }
+    </style>
+</head>
+<body>
+    <h1>I Love You ❤</h1>
+    <div class="carousel">
+        <img src="pics/img.jpg" alt="Image 1">
+        <img src="pics/img2.jpg" alt="Image 2">
+        <img src="pics/img3.jpg" alt="Image 3">
+        <img src="pics/img4.jpg" alt="Image 4">
+        <img src="pics/img5.jpg" alt="Image 5">
+        <img src="pics/img6.jpg" alt="Image 6">
+        <img src="pics/img7.jpg" alt="Image 7">
+        <img src="pics/img8.jpg" alt="Image 8">
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's My Love!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .front-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: var(--bg-color);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: var(--txt-color);
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: var(--heart-color);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="front-page">
+        <h1>Happy Valentine's My Love!</h1>
+        <button onclick="window.location.href='valentine.html'">Open Your Surprise</button>
+    </div>
+</body>
+</html>

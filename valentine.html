@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Love!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: var(--bg-color);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .envelope-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+            background: var(--heart-color);
+            z-index: 4;
+            box-shadow: 0 1px 6px var(--shadow-color);
+            cursor: pointer;
+        }
+        .heart:before, 
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--heart-color);
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -10px;
+        }
+        .heart:after {
+            right: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .bottom-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: var(--heart-color);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            margin-top: 20px;
+        }
+        .bottom-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hi Love!.</strong>
+                        <p>
+                            Happy Valentine’s love, sorry agad dahil hindi mo ako kasama mag celebrate ng Valentine’s and
+                            kung eto lang gift ko for you. thank you for always considering my time and busy sched. 
+                            I know mahirap pero sobrang thankful ako. <br>
+                            .... I love you always my love
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+        <div class="button-container">
+            <button class="bottom-button" onclick="window.location.href='next.html'">kiss me</button>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
